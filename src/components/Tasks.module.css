@@ -1,0 +1,59 @@
+.tasksContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 4rem;
+}
+
+.container{
+    width: 736px;
+}
+
+.information{
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.tarefasCriadas, .tarefasConcluidas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tarefasCriadas span:nth-child(1){
+    font-weight: 700;
+    color: var(--blue);
+}
+
+.tarefasConcluidas span:nth-child(1){
+    font-weight: 700;
+    color: var(--purple);
+}
+
+.tarefasCriadas span:nth-child(2), .tarefasConcluidas span:nth-child(2) {
+    background-color: var(--gray-400);
+    padding: 2px 8px;
+    border-radius: 8px;
+
+    color: var(--gray-200);
+
+    font-weight: 700;
+    font-size: 0.75rem;
+    line-height: 1.5;
+}
+
+.tasks{
+    min-height: 244px;
+
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--gray-400);
+    border-radius: 8px;
+ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
