@@ -9,6 +9,8 @@
 
     border: 1px solid var(--gray-400);
     border-radius: 8px;
+
+    width: 100%;
 }
 
 .circle{
@@ -22,6 +24,11 @@
     justify-content: center;
 
     cursor: pointer;
+}
+
+.circle:hover{
+    border: 1px solid var(--blue-dark);
+    background-color: rgba(30,111,159,.3)
 }
 
 .circleCompleted{
@@ -38,11 +45,42 @@
     cursor: pointer;
 }
 
+.circleCompleted:hover{
+    background-color: var(--purple);
+}
+
+.taskIncompleted{
+    display: flex;
+    flex-wrap: wrap;
+    width: 39.5rem;
+}
+
 .taskCompleted{
+    display: flex;
+    flex-wrap: wrap;
+    width: 39.5rem;
+    word-wrap: break-word;
+
     color: var(--gray-300);
     text-decoration-line: line-through;
 }
 
 .trash{
+    width: 1.5rem;
+    height: 1.5rem;
+
+    background-color: transparent;
+    border: 0;
+    border-radius: 4px;
     color: var(--gray-300);
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trash:hover{
+    background-color: var(--gray-400);
+    color: var(--red-danger)
 }

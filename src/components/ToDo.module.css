@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    margin-bottom: 3rem;
 }
 
 .headerContainer{
@@ -52,6 +54,10 @@ form{
     font-size: 1rem;
 }
 
+.inputTask:focus{
+    color: var(--gray-100)
+}
+
 .buttonCreate{
     background-color: var(--blue-dark);
 
@@ -69,4 +75,12 @@ form{
     color: var(--gray-100);
 
     cursor: pointer;
+}
+
+.buttonCreate:not(:disabled):hover{
+    background-color: var(--blue);
+}
+
+.buttonCreate:disabled{
+    opacity: 0.9;
 }
