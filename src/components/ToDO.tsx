@@ -1,7 +1,7 @@
 import LogoFoguete from '../assets/Logo-Foguete.svg'
 import styles from './ToDo.module.css'
 import {PlusCircle} from 'phosphor-react'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { TaskArea } from './TaskArea'
 
 interface TaskList {
@@ -13,7 +13,7 @@ interface TaskList {
 
 export function ToDo () {
 
-    const [tasks, setTasks] = useState<TaskList[]>([])
+    const [tasks, setTasks] = useState<TaskList[]>(recoverLocalStorage)
     const [newTask,setNewTask] = useState('')
 
     function handleSubmit(e:any) {
@@ -57,6 +57,21 @@ export function ToDo () {
 
     function handleInvalid (e:any) {
         e.target.setCustomValidity("Este campo é obrigatório! Dê um nome para sua tarefa.")
+    }
+
+    useEffect(()=>{
+        const stateJSON = JSON.stringify(tasks)
+        localStorage.setItem('@toDo-List-1.0.0:tasks',stateJSON)
+    },[tasks])
+
+    function recoverLocalStorage(){
+        const storedStateAsJSON = localStorage.getItem('@toDo-List-1.0.0:tasks')
+        if(storedStateAsJSON){
+            return JSON.parse(storedStateAsJSON)
+        }
+        else{
+            return []
+        }
     }
 
     return(
