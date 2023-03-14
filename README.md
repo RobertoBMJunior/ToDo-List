@@ -6,5 +6,6 @@
 <h3> A lista de tarefas cadastradas fica armazenada no LocalStorage do navegador, desta forma, os dados não são perdidos ao recarregar a página.</h3>
 <h3> Eu fiz este projeto como parte do Curso Ignite ReactJS da Rocketseat.</h3>
 <h3> Pra quem tiver interesse em baixar e rodar o projeto, use o comando: npm run dev </h3>
+<h3> Visualizar aplicação: https://robertobmjunior.github.io/ToDo-List/ </h3>
 
 ![image](https://user-images.githubusercontent.com/121899636/225129205-e21dbdaf-006e-466e-af72-6bbf738fa732.png)
