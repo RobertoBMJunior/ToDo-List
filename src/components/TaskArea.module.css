@@ -56,3 +56,15 @@
     align-items: center;
     gap: 12px;
 }
+
+@media only screen and (max-width: 770px) {
+    .container{
+        width: 439.91px;
+    }
+}
+
+@media only screen and (max-width: 465px) {
+    .container{
+        width: 309.91px;
+    }
+}
